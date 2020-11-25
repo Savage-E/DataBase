@@ -1,0 +1,715 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: file:///C:/Users/%D0%9F%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0/Documents/Parser/data_parser/duvenhage%20virus%20genome/Genomes/Nucleotide/Duvenhage%20virus%20isolate%2086132SA,%20complete%20genome[0].html
+Subject: 
+Date: Tue, 17 Nov 2020 10:44:50 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--pwlAxAkyf56LfkzylmQey2LSXx2BDBsmXJXGEXEn7x----"
+
+
+------MultipartBoundary--pwlAxAkyf56LfkzylmQey2LSXx2BDBsmXJXGEXEn7x----
+Content-Type: text/html
+Content-ID: <frame-F78EAE97FAB82A71FD662446381DE8FE@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/Users/%D0%9F%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0/Documents/Parser/data_parser/duvenhage%20virus%20genome/Genomes/Nucleotide/Duvenhage%20virus%20isolate%2086132SA,%20complete%20genome[0].html
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dwindows-1252"></head><body><pre class=3D"genbank">LOCUS       NC_020810 =
+             11976 bp    RNA     linear   VRL 13-AUG-2018
+DEFINITION  Duvenhage virus isolate 86132SA, complete genome.
+ACCESSION   NC_020810
+VERSION     NC_020810.1
+DBLINK      Project: <a href=3D"https://www.ncbi.nlm.nih.gov/bioproject/194=
+144">194144</a>
+            BioProject: <a href=3D"https://www.ncbi.nlm.nih.gov/bioproject/=
+PRJNA485481">PRJNA485481</a>
+KEYWORDS    RefSeq.
+SOURCE      Duvenhage lyssavirus
+  ORGANISM  <a href=3D"file:///C:/Taxonomy/Browser/wwwtax.cgi?id=3D38767">D=
+uvenhage lyssavirus</a>
+            Viruses; Riboviria; Orthornavirae; Negarnaviricota;
+            Haploviricotina; Monjiviricetes; Mononegavirales; Rhabdoviridae=
+;
+            Lyssavirus.
+REFERENCE   1  (bases 1 to 11976)
+  AUTHORS   Delmas,O., Holmes,E.C., Talbi,C., Larrous,F., Dacheux,L.,
+            Bouchier,C. and Bourhy,H.
+  TITLE     Genomic diversity and evolution of the lyssaviruses
+  JOURNAL   PLoS One 3 (4), E2057 (2008)
+   PUBMED   <a href=3D"https://www.ncbi.nlm.nih.gov/pubmed/18446239">184462=
+39</a>
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 11976)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (25-MAR-2013) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 11976)
+  AUTHORS   Bourhy,H.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (19-NOV-2007) UPRE Lyssavirus Dynamics and Host
+            Adaptation, WHO Collaborating Centre for Reference and Research=
+ on
+            Rabies, Institut Pasteur, 25 rue du Docteur Roux, Paris 75724,
+            France
+<a name=3D"comment_NC_020810.1"></a>COMMENT     PROVISIONAL <a href=3D"http=
+s://www.ncbi.nlm.nih.gov/RefSeq/">REFSEQ</a>: This record has not yet been =
+subject to final
+            NCBI review. The reference sequence is identical to <a href=3D"=
+file:///C:/nuccore/EU293119">EU293119</a>.
+            COMPLETENESS: full length.
+<a name=3D"feature_NC_020810.1"></a>FEATURES             Location/Qualifier=
+s
+<span class=3D"feature" id=3D"feature_NC_020810.1_source_0">     source    =
+      1..11976
+                     /organism=3D"Duvenhage lyssavirus"
+                     /mol_type=3D"genomic RNA"
+                     /isolate=3D"86132SA"
+                     /host=3D"Homo sapiens"
+                     /db_xref=3D"taxon:<a href=3D"https://www.ncbi.nlm.nih.=
+gov/Taxonomy/Browser/wwwtax.cgi?id=3D38767">38767</a>"
+                     /country=3D"South Africa"
+                     /collection_date=3D"1971"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_5'UTR_0">     <a c=
+lass=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D1&amp;to=
+=3D58" ifeat=3D"0" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighlight&am=
+p;log$=3Dfeaturehighlight" sfeat=3D"5'UTR">5'UTR</a>           1..58
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_gene_0">     <a cl=
+ass=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D71&amp;to=
+=3D1426" ifeat=3D"0" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighlight&=
+amp;log$=3Dfeaturehighlight" sfeat=3D"gene">gene</a>            71..1426
+                     /gene=3D"N"
+                     /locus_tag=3D"J430_gp1"
+                     /db_xref=3D"GeneID:<a href=3D"https://www.ncbi.nlm.nih=
+.gov/gene/14857942">14857942</a>"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_CDS_0">     <a cla=
+ss=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D71&amp;to=
+=3D1426" ifeat=3D"0" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighlight&=
+amp;log$=3Dfeaturehighlight" sfeat=3D"CDS">CDS</a>             71..1426
+                     /gene=3D"N"
+                     /locus_tag=3D"J430_gp1"
+                     /codon_start=3D1
+                     /product=3D"nucleoprotein"
+                     /protein_id=3D"<a href=3D"file:///C:/protein/471237018=
+">YP_007641402.1</a>"
+                     /db_xref=3D"GeneID:<a href=3D"https://www.ncbi.nlm.nih=
+.gov/gene/14857942">14857942</a>"
+                     /translation=3D"MDAERIVFKVRNQLVSVKPEVISDQYEYKYPAITDKKK=
+PSITLG
+                     RAPDLKTAYKSILSGMNAAKLDPDDVCSYLAGAMILFEGVCPEDWVSYGIHIAR=
+KGDK
+                     ITPATLVDIVRTNTEGNWAQTGGQELTRDPTISEHASLVGLLLCLYRLSKIVGQ=
+NTGN
+                     YKTNVADRMEQIFETAPFVKIVEHHTLMTTHKMCANWSTIPNFRFLAGTYDMFF=
+SRVD
+                     HLYSAIRVGTVVTAYEDCSGLVSFTGFIKQINLTAREAILYFFHKNFEEEIKRM=
+FEPG
+                     QETAVPHSYFIHFRSLGLSGKSPYSSNAVGHVFNLIHFVGCYMGQIRSLNATVI=
+QSCA
+                     PHEMSVLGGYLGEEFFGKGTFERRFFRDEKELQDYEEAEATKIEAALADDGTVN=
+SDDE
+                     DFFSGDTRSPEAVYTRIMMNGGRLKGAHIRRYVSVSSSHQARPNSFAEFLNKTY=
+SSDS
+                     R"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_gene_1">     <a cl=
+ass=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D1517&amp;t=
+o=3D2413" ifeat=3D"1" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighlight=
+&amp;log$=3Dfeaturehighlight" sfeat=3D"gene">gene</a>            1517..2413
+                     /gene=3D"P"
+                     /locus_tag=3D"J430_gp2"
+                     /db_xref=3D"GeneID:<a href=3D"https://www.ncbi.nlm.nih=
+.gov/gene/14857938">14857938</a>"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_CDS_1">     <a cla=
+ss=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D1517&amp;to=
+=3D2413" ifeat=3D"1" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighlight&=
+amp;log$=3Dfeaturehighlight" sfeat=3D"CDS">CDS</a>             1517..2413
+                     /gene=3D"P"
+                     /locus_tag=3D"J430_gp2"
+                     /codon_start=3D1
+                     /product=3D"phosphoprotein"
+                     /protein_id=3D"<a href=3D"file:///C:/protein/471237019=
+">YP_007641403.1</a>"
+                     /db_xref=3D"GeneID:<a href=3D"https://www.ncbi.nlm.nih=
+.gov/gene/14857938">14857938</a>"
+                     /translation=3D"MSKIFINPSDIRSGLADLEMAEETVELVNRNMEDSQAH=
+LQGVPI
+                     DVETLPEDIQRLHITDPQASLRQDMVDEQKHQEDEDFYLTGRENPLSPFQTHLD=
+AIGL
+                     RIVRKMKTGEGFFKIWSQAVEDIVSYVALNFSIPVNKLFEDKSTQTVTEKSQQA=
+SASS
+                     APNRHEKSSQNARVNSKDASGPAALDWTASNEADDESVEAEIAHQIAESFSKKY=
+KFPS
+                     RSSGIFLWNFEQLKMNLDEIVREVKEIPGVIKMAKDGMKLPLRCMLGGVASTHS=
+RRFQ
+                     ILVNPEKLGKVMQEDLDKYLTY"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_gene_2">     <a cl=
+ass=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D2497&amp;t=
+o=3D3105" ifeat=3D"2" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighlight=
+&amp;log$=3Dfeaturehighlight" sfeat=3D"gene">gene</a>            2497..3105
+                     /gene=3D"M"
+                     /locus_tag=3D"J430_gp3"
+                     /db_xref=3D"GeneID:<a href=3D"https://www.ncbi.nlm.nih=
+.gov/gene/14857939">14857939</a>"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_CDS_2">     <a cla=
+ss=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D2497&amp;to=
+=3D3105" ifeat=3D"2" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighlight&=
+amp;log$=3Dfeaturehighlight" sfeat=3D"CDS">CDS</a>             2497..3105
+                     /gene=3D"M"
+                     /locus_tag=3D"J430_gp3"
+                     /codon_start=3D1
+                     /product=3D"matrix protein"
+                     /protein_id=3D"<a href=3D"file:///C:/protein/471237020=
+">YP_007641404.1</a>"
+                     /db_xref=3D"GeneID:<a href=3D"https://www.ncbi.nlm.nih=
+.gov/gene/14857939">14857939</a>"
+                     /translation=3D"MNIIRKIVKSCKEEEEQKPSPVSAPPDDDDLWLPPPEY=
+VPLSEI
+                     ANKKNMRNFCVNGEIKVCSPNGYSFRILRHILRSFEGVYSGNRRMIGLVKVVIG=
+LALS
+                     GAPVPDGMNWVYKIRRTLIFQWADSSGPLDGEELEYPQEITWDDDSEFVGLQIR=
+VSAR
+                     QCHIQGRIWCINMNSRACQLWSDMSLKTQQSDEDKNTSLLLE"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_gene_3">     <a cl=
+ass=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D3297&amp;t=
+o=3D4898" ifeat=3D"3" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighlight=
+&amp;log$=3Dfeaturehighlight" sfeat=3D"gene">gene</a>            3297..4898
+                     /gene=3D"G"
+                     /locus_tag=3D"J430_gp4"
+                     /db_xref=3D"GeneID:<a href=3D"https://www.ncbi.nlm.nih=
+.gov/gene/14857940">14857940</a>"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_CDS_3">     <a cla=
+ss=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D3297&amp;to=
+=3D4898" ifeat=3D"3" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighlight&=
+amp;log$=3Dfeaturehighlight" sfeat=3D"CDS">CDS</a>             3297..4898
+                     /gene=3D"G"
+                     /locus_tag=3D"J430_gp4"
+                     /codon_start=3D1
+                     /product=3D"glycoprotein"
+                     /protein_id=3D"<a href=3D"file:///C:/protein/471237021=
+">YP_007641405.1</a>"
+                     /db_xref=3D"GeneID:<a href=3D"https://www.ncbi.nlm.nih=
+.gov/gene/14857940">14857940</a>"
+                     /translation=3D"MPLNAVIFTLLLRCSICLGKFPIYTIPDKLGPWSPIDI=
+HHLSCP
+                     NNLVVEDEGCTTLTPFSYMELKVGYITSIKVSGFTCTGVVTEAETYTNFVGYVT=
+TTFR
+                     RRHFRPSVNSCRDAYNWKIAGDPRYEESLHNPYPDSHWLRTVKTTKESLLIISP=
+SVAD
+                     MDAYDKKLYSKMFPNGRCSEISPGSPFCPTNHEYTIWMPESSNPGISCDIFTRS=
+MGKK
+                     ATKDGQLCGFVDERGLYKSLKGACRLRLCGISGLRLMDGSWVSLPQVNNSEWCS=
+PDQL
+                     VNIHDFHSDEIEHLVADELVKKREDCLDALETIIFTKSISFRRLSRLRKLVPGF=
+GKAY
+                     TIINRTLMEAEAHYKSVREWKEIIPSKGCLKAGGRCYPHHNGIFFNGIILGPGG=
+EILI
+                     PEMQSALLQQHIELLESSVVPLKHPLADPSTVFKNDDEAESFVDVHLPDTNQKI=
+SGID
+                     LGLPEWKRYFLIGVSAVALLALSIIIAVCCKRFRKRRKSKPSPVELTRKVSVIS=
+KGNG
+                     PVPSWESYKEGTTGDVRNTTPSTRE"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_gene_4">     <a cl=
+ass=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D5462&amp;t=
+o=3D11845" ifeat=3D"4" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighligh=
+t&amp;log$=3Dfeaturehighlight" sfeat=3D"gene">gene</a>            5462..118=
+45
+                     /gene=3D"L"
+                     /locus_tag=3D"J430_gp5"
+                     /db_xref=3D"GeneID:<a href=3D"https://www.ncbi.nlm.nih=
+.gov/gene/14857941">14857941</a>"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_CDS_4">     <a cla=
+ss=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D5462&amp;to=
+=3D11845" ifeat=3D"4" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighlight=
+&amp;log$=3Dfeaturehighlight" sfeat=3D"CDS">CDS</a>             5462..11845
+                     /gene=3D"L"
+                     /locus_tag=3D"J430_gp5"
+                     /codon_start=3D1
+                     /product=3D"polymerase"
+                     /protein_id=3D"<a href=3D"file:///C:/protein/471237022=
+">YP_007641406.1</a>"
+                     /db_xref=3D"GeneID:<a href=3D"https://www.ncbi.nlm.nih=
+.gov/gene/14857941">14857941</a>"
+                     /translation=3D"MLESTEVYDDPLDPVEPEFDLKTNSVVPNILRNSDYNL=
+NSPLLE
+                     DPSKLMLEWLMTGNKPHRLNLTDNLLRSYKVLKGYFKRLDTGSLRVGSVGSQAM=
+VTLW
+                     LHGSHSESTRSRKCLAELSQFYKKSAPIETLLNCTLENRGLRTPPEGVLSCLDK=
+VHYD
+                     QAFGRYLGNTYSSYLFFHVMVLYMNALDWDEEKTILSLWRDISSIDIKNDLVKF=
+KDQI
+                     WGTLVVTKDFIYSQSANCLFDRNYTLMLKDLFLSRFNSFLILLSPPEARYSDDL=
+VSNL
+                     CQLYISGDRVLSVCGNSGFDVIKLLEPYIVNKLVQRAEKFRPLIHSLGDFPQFI=
+KDKT
+                     TQLEGTFGPSAKEFFQTMDSLDNVHDLVFVYGCYRHWGHPYIDYRRGLSKLYDQ=
+VHLK
+                     KTIDKSYQECLASDLAKRILRWGFDKYSRWYVDPNLLQNDHPLVPYVRTQTWPP=
+KHVV
+                     DVVGDTWHNLPITQIFEIPESMDPSEILDDKSHSFTRTKLASWLSEHRGGPVPS=
+EKVI
+                     ITALSRPPVNPREFLRSIDVSGLPDDDLIIGLKPKERELKIEGRFFALMSWNLR=
+LYFV
+                     ITEKLLATYILPLFDSLTMTDNLNKVFKKLIDRVTGQGLLDYSRVTYAFHLDYE=
+KWNN
+                     HQRLESTIDVFSVLDKVFGLKKVFSRTHEFFQKSWIYYSDRSDLIGLWRDQIYC=
+LDMS
+                     NGPTCWNGQDGGLEGLRQKGWSLVSLLMIDRESQTRNTRTKILAQGDNQVLCPT=
+YMLS
+                     PGLNKEGLLYELDSISRNAISIYRAIEDGAAKLGLIIKKEETMCSYDFLIYGKT=
+PLFR
+                     GNILVPESKRWARVSCISNDQIVNLANIMSTVSTNALTVAQHSQSLIKPMRDFL=
+LMSV
+                     QAVFHYLLFSPILKNRVYKILVADGTEFLLAMSRIIYLDPSLGGVSGMSLGRFH=
+IRQF
+                     SDPVSEGLSFWREIWSSSSETWIHSLCQEAGNPDLGERSLESFTRLLEDPTTLN=
+IRGG
+                     ASPTILLKEAIRKALYDEVDKVENSEFREAILLSKTHRDNFILFLRSVEPLFPR=
+FLSE
+                     LFSSSFLGIPESIIGLIQNSRTIRRQFRKSLSRTLEESFFSSEIQGISRVTQVA=
+QKIG
+                     RVWRCSAERADQLREISWGRKVVGTTVPHPSEMLSMIPKSSISCTCGQLEDDNP=
+RISV
+                     SVLPSFDQTFFSRGPLKGYLGSSTSMSTQLFHAWEKVTNVHVVKRALSLKESIN=
+WFIS
+                     RDSNLAHTLIRNIVSLTGPSFPLEEAPVFKRTGSALHRFKSARYSEGGYSSICP=
+NLLS
+                     HISVSTDTMSDLTQDGTNFDFMFQPLMLYAQTWTSELVQKDLRLKDSTFHWHLR=
+CVRC
+                     VRPIDDITLEAPNVFSFPDVSRRISRMVSGAVPQFQKLPEISLKPGKFETLSGK=
+DQSK
+                     HIGTAQGLLYSILVAIHDSGYNDGTVFPVNIYKRVSPRDYLRGLARGVLIGSSI=
+CFLT
+                     RMTSININRPLELISGVISYILLRLDNHPSLYVMLKEPSLRLEIFSIPQKIPAA=
+YPTT
+                     MKEGNRSVLCYLQHVLRYEREAITASPECDWLWIFSDFRSIKMTYLTLITYQSH=
+LLLQ
+                     KIDRNLSKQMRVQLRQLNSLMRQVLGGHGEGSLDSADDIHGLLRDALQRTRWVD=
+QEVR
+                     HAAKAMKCDYSPQKRSSRKASSSEWICSAQQIAISTSSNPAPTSEIDIRALSRK=
+LQNP
+                     LISGLRVVQWATGAHYKLKPILNELDTYPTLCLVVGDGSGGISRAVLSMFPDAK=
+LVFN
+                     SLLEVSDLMASGTHPLPPSALVSGGEDIISRVIDFQSIWEKPSDLRNPSTWRYF=
+QSVQ
+                     QTTNMSYDLIICDAEVTDISSINKITLLMSDFSLSINGPLSLIFKTYGTMLVNP=
+DYRA
+                     IQHLSRAFPSAAGYITQVTSSFSSELYLKFSKRGKFFRDPEHLTSSTLREMSLV=
+LFNC
+                     SSSKSEMLRAXSLNYQDLVRGFPEEIISNPYNEMIITLIDNDVESFLVHKMIDD=
+LELQ
+                     RGAFSKLSIILTIMVVFSNRVFNVSKPLTDTKFYPPSDPKILKHFNICCSTLLY=
+LSVA
+                     LGDVLNFARLHELYNNPITYYFRKQVIGGRMYLAWSWSHSTSVFKRVACNSNLS=
+LSAH
+                     WIRLIYKVVKTTRLTGGPKDLSREMERHLKSYNRWINFDDLRSRSSLLDYSGL"
+</span><span class=3D"feature" id=3D"feature_NC_020810.1_3'UTR_0">     <a c=
+lass=3D"pseudolink" href=3D"file:///C:/nuccore/NC_020810.1?from=3D11907&amp=
+;to=3D11976" ifeat=3D"0" igi=3D"NC_020810.1" ref=3D"discoid=3Dfeaturehighli=
+ght&amp;log$=3Dfeaturehighlight" sfeat=3D"3'UTR">3'UTR</a>           11907.=
+.11976
+</span>ORIGIN     =20
+<a name=3D"sequence_NC_020810.1"></a>        1 <span class=3D"ff_line" id=
+=3D"NC_020810.1_1">acgcttaaca acaaaatcat aaaaggggca gacatgttca tttgtataac a=
+caaatgtaa</span>
+       61 <span class=3D"ff_line" id=3D"NC_020810.1_61">cacccctaca atggatgc=
+tg aaagaattgt ctttaaggtc cgtaatcagc tagtctctgt</span>
+      121 <span class=3D"ff_line" id=3D"NC_020810.1_121">aaaaccagag gtcatct=
+ctg atcagtatga gtacaaatat cctgctatta ctgataagaa</span>
+      181 <span class=3D"ff_line" id=3D"NC_020810.1_181">gaagcctagt atcacac=
+ttg gaagggctcc ggacttgaag acagcataca agtccatctt</span>
+      241 <span class=3D"ff_line" id=3D"NC_020810.1_241">gtcggggatg aatgccg=
+cca agctggatcc agatgacgta tgttcatact tagcaggtgc</span>
+      301 <span class=3D"ff_line" id=3D"NC_020810.1_301">tatgattttg tttgagg=
+gtg tgtgtcccga agattgggtt agttatggaa tccacattgc</span>
+      361 <span class=3D"ff_line" id=3D"NC_020810.1_361">ccggaaaggc gataaaa=
+taa cccctgctac gttagttgac atagttagaa caaatacaga</span>
+      421 <span class=3D"ff_line" id=3D"NC_020810.1_421">gggtaactgg gctcaga=
+cgg gaggtcagga attaactaga gatccaacaa tctcagaaca</span>
+      481 <span class=3D"ff_line" id=3D"NC_020810.1_481">tgcatcattg gtaggac=
+ttt tactttgcct atataggtta agcaaaattg taggacagaa</span>
+      541 <span class=3D"ff_line" id=3D"NC_020810.1_541">cacagggaat tacaaga=
+cga atgtggctga ccggatggaa cagatttttg aaactgctcc</span>
+      601 <span class=3D"ff_line" id=3D"NC_020810.1_601">atttgtcaag atagtcg=
+agc accacacatt aatgaccact cacaaaatgt gtgcgaattg</span>
+      661 <span class=3D"ff_line" id=3D"NC_020810.1_661">gagcacaata cccaatt=
+tta gatttcttgc aggaacatat gacatgttct tctccagggt</span>
+      721 <span class=3D"ff_line" id=3D"NC_020810.1_721">ggatcatttg tactcgg=
+cta ttagggttgg gacggtagtc actgcatatg aagattgttc</span>
+      781 <span class=3D"ff_line" id=3D"NC_020810.1_781">aggtttagtc tccttta=
+ctg ggtttatcaa gcagattaac ttgaccgcta gagaagccat</span>
+      841 <span class=3D"ff_line" id=3D"NC_020810.1_841">attatacttc tttcaca=
+aga actttgagga ggagatcaaa agaatgtttg agcccggaca</span>
+      901 <span class=3D"ff_line" id=3D"NC_020810.1_901">ggagactgct gtgcctc=
+act cctactttat ccactttaga tccttaggtc ttagcggcaa</span>
+      961 <span class=3D"ff_line" id=3D"NC_020810.1_961">gtctccttac tcctcca=
+atg ctgtcggaca tgtgttcaac ttgatccatt ttgtaggttg</span>
+     1021 <span class=3D"ff_line" id=3D"NC_020810.1_1021">ttacatgggt caaatc=
+agat cattaaacgc tacagttatc caaagttgtg ccccgcatga</span>
+     1081 <span class=3D"ff_line" id=3D"NC_020810.1_1081">gatgtccgta ttggga=
+ggtt atttgggaga ggaattcttc ggaaagggga cctttgagag</span>
+     1141 <span class=3D"ff_line" id=3D"NC_020810.1_1141">acgattcttt cgggac=
+gaga aagagctgca agactatgaa gaagcagagg ccactaagat</span>
+     1201 <span class=3D"ff_line" id=3D"NC_020810.1_1201">tgaggctgca ttggct=
+gatg atggaactgt gaactccgac gatgaagact ttttctccgg</span>
+     1261 <span class=3D"ff_line" id=3D"NC_020810.1_1261">agatacgaga agtcca=
+gaag ctgtttacac aaggatcatg atgaacggag ggcggttaaa</span>
+     1321 <span class=3D"ff_line" id=3D"NC_020810.1_1321">gggggcacac ataaga=
+aggt acgtctctgt aagttctagt caccaagcaa gaccaaactc</span>
+     1381 <span class=3D"ff_line" id=3D"NC_020810.1_1381">ctttgcagag ttcctc=
+aaca agacctactc cagtgactcc agataagact ctgctcaaag</span>
+     1441 <span class=3D"ff_line" id=3D"NC_020810.1_1441">caaaacaatg aggcat=
+caat tccgctcaat tagacatgaa aaaaactaac accactccgc</span>
+     1501 <span class=3D"ff_line" id=3D"NC_020810.1_1501">aggtccatca atcatc=
+atga gcaagatttt tatcaatcct agtgacattc gatcaggact</span>
+     1561 <span class=3D"ff_line" id=3D"NC_020810.1_1561">tgcagatctt gagatg=
+gctg aagagaccgt cgaattggtc aaccggaaca tggaagacag</span>
+     1621 <span class=3D"ff_line" id=3D"NC_020810.1_1621">tcaagctcat ctccaa=
+gggg tccccataga tgtggagacc ctccctgagg atattcagag</span>
+     1681 <span class=3D"ff_line" id=3D"NC_020810.1_1681">actccatatc acagat=
+cctc aagccagcct ccgacaggat atggttgatg agcaaaaaca</span>
+     1741 <span class=3D"ff_line" id=3D"NC_020810.1_1741">ccaggaggat gaggac=
+tttt accttacagg aagagaaaac cctctttctc cgtttcagac</span>
+     1801 <span class=3D"ff_line" id=3D"NC_020810.1_1801">acatcttgat gctata=
+ggac ttcgcattgt gaggaagatg aagacagggg aaggtttttt</span>
+     1861 <span class=3D"ff_line" id=3D"NC_020810.1_1861">caagatatgg tcacag=
+gcag tggaggacat cgtctcttat gtagccctta acttctccat</span>
+     1921 <span class=3D"ff_line" id=3D"NC_020810.1_1921">tccagtgaac aagctg=
+tttg aagacaagtc cacccagact gttactgaaa agtctcaaca</span>
+     1981 <span class=3D"ff_line" id=3D"NC_020810.1_1981">ggcctctgcc tcgtcg=
+gctc caaatcggca tgagaaatca tctcagaacg ccagggtcaa</span>
+     2041 <span class=3D"ff_line" id=3D"NC_020810.1_2041">ctccaaggat gcatca=
+ggtc ctgcagctct agactggact gccagcaatg aagcagatga</span>
+     2101 <span class=3D"ff_line" id=3D"NC_020810.1_2101">cgagtcagtc gaagct=
+gaga tagctcatca gattgcagaa agcttctcta aaaagtacaa</span>
+     2161 <span class=3D"ff_line" id=3D"NC_020810.1_2161">gttcccgtct agatcc=
+tcag ggattttctt atggaacttt gaacaattga aaatgaactt</span>
+     2221 <span class=3D"ff_line" id=3D"NC_020810.1_2221">ggatgaaata gttcgg=
+gagg tcaaggaaat tcccggagtg atcaagatgg cgaaagacgg</span>
+     2281 <span class=3D"ff_line" id=3D"NC_020810.1_2281">gatgaagctg cctctc=
+aggt gtatgctggg aggagtggct tctacccact ctcgaaggtt</span>
+     2341 <span class=3D"ff_line" id=3D"NC_020810.1_2341">ccagattctc gtgaat=
+ccgg aaaaacttgg aaaagttatg caggaggatc ttgacaaata</span>
+     2401 <span class=3D"ff_line" id=3D"NC_020810.1_2401">cctgacctat tagatt=
+aggt tttgataata cacaagacaa ccatctcatt cagttgtagc</span>
+     2461 <span class=3D"ff_line" id=3D"NC_020810.1_2461">atagtcatga aaaaaa=
+catg caacaccact gacaaaatga acatcatccg taagatagta</span>
+     2521 <span class=3D"ff_line" id=3D"NC_020810.1_2521">aaaagctgca aagagg=
+agga ggagcaaaag cccagtccgg tttcagcccc ccccgatgac</span>
+     2581 <span class=3D"ff_line" id=3D"NC_020810.1_2581">gatgacctgt ggcttc=
+cccc tccagagtat gtccctctgt cagagatcgc caataagaag</span>
+     2641 <span class=3D"ff_line" id=3D"NC_020810.1_2641">aacatgagga atttct=
+gtgt caatggtgaa attaaagtgt gtagtccgaa cgggtattct</span>
+     2701 <span class=3D"ff_line" id=3D"NC_020810.1_2701">tttcgaattc ttaggc=
+acat cttaagatcc tttgaagggg tatattcagg gaacagaaga</span>
+     2761 <span class=3D"ff_line" id=3D"NC_020810.1_2761">atgattggac tggtta=
+aggt ggtgattgga ttggccttgt caggggcacc tgtccctgat</span>
+     2821 <span class=3D"ff_line" id=3D"NC_020810.1_2821">gggatgaact gggttt=
+acaa aattagacgc actttaatat ttcaatgggc agactcatca</span>
+     2881 <span class=3D"ff_line" id=3D"NC_020810.1_2881">ggccctcttg atggtg=
+agga acttgaatac cctcaggaaa taacttggga tgatgattcc</span>
+     2941 <span class=3D"ff_line" id=3D"NC_020810.1_2941">gagtttgtag gactgc=
+aaat aagagtgagt gcaagacaat gtcatatcca agggagaatt</span>
+     3001 <span class=3D"ff_line" id=3D"NC_020810.1_3001">tggtgtatca acatga=
+actc acgggcgtgt caactctggt ctgacatgtc tctcaaaacc</span>
+     3061 <span class=3D"ff_line" id=3D"NC_020810.1_3061">cagcagtctg atgaag=
+acaa gaacacctct ctcctgttgg aatgactatc tattaagatc</span>
+     3121 <span class=3D"ff_line" id=3D"NC_020810.1_3121">attgtgcact gataga=
+cact ggtgacttcc actcgtctcc gagagcaata gaacaacata</span>
+     3181 <span class=3D"ff_line" id=3D"NC_020810.1_3181">tgttatggtg ccacac=
+aata gctgcataac tccaaacttg tgatccagag ccttcctaag</span>
+     3241 <span class=3D"ff_line" id=3D"NC_020810.1_3241">taagatctta gcaatg=
+tgaa aaaaacaggc aacacccctc aaggagttca agcgccatgc</span>
+     3301 <span class=3D"ff_line" id=3D"NC_020810.1_3301">cactcaatgc agtcat=
+cttt actcttctcc tcagatgttc catctgcctt ggaaagtttc</span>
+     3361 <span class=3D"ff_line" id=3D"NC_020810.1_3361">ccatttatac gatccc=
+tgac aaattggggc catggagccc tatagacata catcatctca</span>
+     3421 <span class=3D"ff_line" id=3D"NC_020810.1_3421">gttgcccaaa taactt=
+ggtt gtggaagacg aaggatgtac aactctcacc cctttttcat</span>
+     3481 <span class=3D"ff_line" id=3D"NC_020810.1_3481">acatggagtt aaaggt=
+aggt tacattacat caataaaggt gtccggtttt acctgcactg</span>
+     3541 <span class=3D"ff_line" id=3D"NC_020810.1_3541">gggtagtgac tgaagc=
+tgag acttatacca atttcgttgg gtatgtgacg acaacattta</span>
+     3601 <span class=3D"ff_line" id=3D"NC_020810.1_3601">gaagaagaca tttccg=
+tcca tcagtaaact cttgtagaga tgcatacaat tggaagatcg</span>
+     3661 <span class=3D"ff_line" id=3D"NC_020810.1_3661">caggagaccc taggta=
+tgaa gaatcactac acaaccctta tccagactct cactggctca</span>
+     3721 <span class=3D"ff_line" id=3D"NC_020810.1_3721">gaactgtcaa gactac=
+aaaa gaatctcttt tgataatctc ccccagcgtg gctgacatgg</span>
+     3781 <span class=3D"ff_line" id=3D"NC_020810.1_3781">atgcttatga caagaa=
+gctt tactccaaga tgtttcctaa cggaaggtgt tcggaaatat</span>
+     3841 <span class=3D"ff_line" id=3D"NC_020810.1_3841">ctcctggttc cccctt=
+ttgt cccaccaatc acgaatacac tatctggatg cccgagagct</span>
+     3901 <span class=3D"ff_line" id=3D"NC_020810.1_3901">caaaccccgg aatatc=
+ctgt gacatattca caagaagcat ggggaagaaa gccaccaaag</span>
+     3961 <span class=3D"ff_line" id=3D"NC_020810.1_3961">atggacagtt atgtgg=
+gttt gtagatgaga gaggactgta caaatctttg aagggagctt</span>
+     4021 <span class=3D"ff_line" id=3D"NC_020810.1_4021">gtagattaag actctg=
+tggg atcagcggac tgagactgat ggacgggtca tgggtttcac</span>
+     4081 <span class=3D"ff_line" id=3D"NC_020810.1_4081">tcccacaggt taacaa=
+ctca gaatggtgct ccccagacca actcgtcaac attcacgact</span>
+     4141 <span class=3D"ff_line" id=3D"NC_020810.1_4141">tccattcaga tgagat=
+agag catcttgtcg cagatgagtt ggtgaaaaag agagaggatt</span>
+     4201 <span class=3D"ff_line" id=3D"NC_020810.1_4201">gtctagacgc ccttga=
+aact atcatcttca ccaaatctat aagtttccgg cggttaagcc</span>
+     4261 <span class=3D"ff_line" id=3D"NC_020810.1_4261">gtcttcggaa gctggt=
+tcca ggctttggta aggcatatac tatcataaat aggaccctta</span>
+     4321 <span class=3D"ff_line" id=3D"NC_020810.1_4321">tggaagcaga ggctca=
+ttac aagtcagtgc gggagtggaa ggaaattatt ccatccaagg</span>
+     4381 <span class=3D"ff_line" id=3D"NC_020810.1_4381">ggtgtctgaa ggcagg=
+aggg aggtgctatc ctcatcacaa tggaattttc ttcaacggga</span>
+     4441 <span class=3D"ff_line" id=3D"NC_020810.1_4441">tcattctggg tccggg=
+aggg gagatcttga tccctgagat gcagtctgcc ttgctccaac</span>
+     4501 <span class=3D"ff_line" id=3D"NC_020810.1_4501">agcacattga gctgtt=
+agag tcctctgtag ttcccctcaa acaccccctg gcagaccctt</span>
+     4561 <span class=3D"ff_line" id=3D"NC_020810.1_4561">cgactgtctt caagaa=
+tgat gatgaagcgg agagtttcgt agatgttcac cttcctgata</span>
+     4621 <span class=3D"ff_line" id=3D"NC_020810.1_4621">caaaccaaaa aatatc=
+tgga attgacttag ggttgccaga gtggaaacgt tacttcctaa</span>
+     4681 <span class=3D"ff_line" id=3D"NC_020810.1_4681">taggagtctc agcagt=
+tgct ttgttggctt tatctataat tatcgctgtc tgttgcaaaa</span>
+     4741 <span class=3D"ff_line" id=3D"NC_020810.1_4741">ggttcaggaa aaggag=
+gaaa tccaaaccca gtccagtaga attgactaga aaagtgtctg</span>
+     4801 <span class=3D"ff_line" id=3D"NC_020810.1_4801">tcatatccaa aggaaa=
+tgga ccggtccctt cctgggaatc ttataaagaa ggaaccacag</span>
+     4861 <span class=3D"ff_line" id=3D"NC_020810.1_4861">gagatgttcg taatac=
+gact ccatcaacaa gggagtgaga ggccggatga tgcttgagga</span>
+     4921 <span class=3D"ff_line" id=3D"NC_020810.1_4921">tgtccagatg gataca=
+ttct ttatgattta cctcatcact taagagcggt acacttgatt</span>
+     4981 <span class=3D"ff_line" id=3D"NC_020810.1_4981">gatataatgt ttgaag=
+attt acttcacatt gtctgagaag acttaagaga tcacaagaaa</span>
+     5041 <span class=3D"ff_line" id=3D"NC_020810.1_5041">gtttcatcat tatcca=
+ttga tttctgctgc atagcgaggt tgatttgtgc caaagattgt</span>
+     5101 <span class=3D"ff_line" id=3D"NC_020810.1_5101">ttgattttaa caccca=
+cccc tccaataacg ttggtgctca ttacgatcaa gacaaaattt</span>
+     5161 <span class=3D"ff_line" id=3D"NC_020810.1_5161">aattagtaga tggagt=
+gacg cgggaatttg aaaggcaatc atggtcaatg atttatatat</span>
+     5221 <span class=3D"ff_line" id=3D"NC_020810.1_5221">gctacattag tgtaat=
+ttcc acctttgtgt gttttgcaca tttttgaggg tacgcattag</span>
+     5281 <span class=3D"ff_line" id=3D"NC_020810.1_5281">ccttataact aaccca=
+gggg gaggtgtgat gagatcttac tacagatcca ttgcctcaat</span>
+     5341 <span class=3D"ff_line" id=3D"NC_020810.1_5341">caagatgaga acacag=
+agct tcagatttat ggatgcgtgc tcatgaaaaa aacatcacaa</span>
+     5401 <span class=3D"ff_line" id=3D"NC_020810.1_5401">agaggaatag aaagaa=
+aata aaaaaagtta acacccctcc tttgagcgat catttttcag</span>
+     5461 <span class=3D"ff_line" id=3D"NC_020810.1_5461">catgctggag tccaca=
+gagg tgtacgatga ccctctggat cctgttgaac cggagttcga</span>
+     5521 <span class=3D"ff_line" id=3D"NC_020810.1_5521">tctcaagaca aactcc=
+gtcg taccaaacat tttaagaaac tcagactaca atctgaactc</span>
+     5581 <span class=3D"ff_line" id=3D"NC_020810.1_5581">tcccctctta gaagat=
+cctt caaaactgat gctcgagtgg ctgatgactg gaaacaaacc</span>
+     5641 <span class=3D"ff_line" id=3D"NC_020810.1_5641">acacagactc aacttg=
+acag ataacttgct cagatcatac aaggtcttga aaggatattt</span>
+     5701 <span class=3D"ff_line" id=3D"NC_020810.1_5701">caagagattg gacacg=
+ggtt cgttgagagt tggttctgta gggtcccaag cgatggtgac</span>
+     5761 <span class=3D"ff_line" id=3D"NC_020810.1_5761">cctgtggcta catggg=
+tccc attctgaatc aacaagaagt agaaaatgcc ttgcggagtt</span>
+     5821 <span class=3D"ff_line" id=3D"NC_020810.1_5821">gtctcagttc tacaaa=
+aaat cagctccaat agagacattg ctgaactgca cactggagaa</span>
+     5881 <span class=3D"ff_line" id=3D"NC_020810.1_5881">caggggcttg agaaca=
+cccc cggaaggggt tctgtcttgt cttgacaaag ttcactatga</span>
+     5941 <span class=3D"ff_line" id=3D"NC_020810.1_5941">tcaagcgttc gggcgg=
+tacc tgggtaacac ttattcttca tatctgttct tccatgtgat</span>
+     6001 <span class=3D"ff_line" id=3D"NC_020810.1_6001">ggttctgtat atgaac=
+gcct tagattggga tgaggaaaag accattctat ctctgtggag</span>
+     6061 <span class=3D"ff_line" id=3D"NC_020810.1_6061">ggatatctcc tccata=
+gaca tcaagaatga cttagtgaag ttcaaagatc agatatgggg</span>
+     6121 <span class=3D"ff_line" id=3D"NC_020810.1_6121">gactttggtt gtcacg=
+aagg atttcatata ctcccagagt gcaaattgtc tatttgacag</span>
+     6181 <span class=3D"ff_line" id=3D"NC_020810.1_6181">gaattacacc ctcatg=
+ctta aagacctttt cctgtcccgc ttcaactcat ttctgatatt</span>
+     6241 <span class=3D"ff_line" id=3D"NC_020810.1_6241">gctctcacct cccgaa=
+gcaa gatattcaga tgacttagta tctaacttgt gtcaacttta</span>
+     6301 <span class=3D"ff_line" id=3D"NC_020810.1_6301">catatcaggc gacagg=
+gtat tgtctgtgtg tggaaactct ggattcgacg taatcaagtt</span>
+     6361 <span class=3D"ff_line" id=3D"NC_020810.1_6361">gttagagccg tacata=
+gtaa acaagttagt acaaagggca gagaagttcc gtcctctcat</span>
+     6421 <span class=3D"ff_line" id=3D"NC_020810.1_6421">acactctctg ggggat=
+ttcc ctcaatttat taaagacaag acaacccagc tcgaagggac</span>
+     6481 <span class=3D"ff_line" id=3D"NC_020810.1_6481">cttcggcccc agtgcc=
+aagg agtttttcca aactatggac tccctagaca atgtacatga</span>
+     6541 <span class=3D"ff_line" id=3D"NC_020810.1_6541">cttggtgttt gtgtac=
+ggat gctatagaca ctggggccat ccatatatag actatagaag</span>
+     6601 <span class=3D"ff_line" id=3D"NC_020810.1_6601">agggctgtct aaactg=
+tatg atcaggtcca cctcaagaag acaatagaca agagttatca</span>
+     6661 <span class=3D"ff_line" id=3D"NC_020810.1_6661">ggagtgttta gccagt=
+gact tagccaaaag aattctcaga tgggggtttg ataagtattc</span>
+     6721 <span class=3D"ff_line" id=3D"NC_020810.1_6721">cagatggtat gtagac=
+ccca atttgttgca aaatgatcat cccctggttc catatgtgag</span>
+     6781 <span class=3D"ff_line" id=3D"NC_020810.1_6781">aacccaaaca tggcct=
+ccaa aacatgtggt tgatgttgtg ggagacacat ggcacaatct</span>
+     6841 <span class=3D"ff_line" id=3D"NC_020810.1_6841">ccccattacc cagata=
+tttg agatacctga gtctatggac ccctccgaga ttttagatga</span>
+     6901 <span class=3D"ff_line" id=3D"NC_020810.1_6901">caagtcacac tcattt=
+acaa gaaccaagct agcttcttgg ctttctgaac acagaggggg</span>
+     6961 <span class=3D"ff_line" id=3D"NC_020810.1_6961">gccggtcccc agtgag=
+aagg tcataatcac agccttgtcc agacccccag tgaatcctag</span>
+     7021 <span class=3D"ff_line" id=3D"NC_020810.1_7021">agagttcctc aggtct=
+attg atgtcagtgg gttgcctgat gatgatctaa tcataggtct</span>
+     7081 <span class=3D"ff_line" id=3D"NC_020810.1_7081">aaaaccaaag gaaaga=
+gaat tgaagataga gggccgattc ttcgcactca tgtcctggaa</span>
+     7141 <span class=3D"ff_line" id=3D"NC_020810.1_7141">tctgaggctt tatttt=
+gtca tcacagagaa gcttttggcc acatacatcc tgcctctatt</span>
+     7201 <span class=3D"ff_line" id=3D"NC_020810.1_7201">tgactctcta accatg=
+acgg acaacctgaa caaagtcttc aaaaagttga tcgacagagt</span>
+     7261 <span class=3D"ff_line" id=3D"NC_020810.1_7261">gacaggacaa gggttg=
+ttag actactcgcg agttacatat gcatttcatc tcgactatga</span>
+     7321 <span class=3D"ff_line" id=3D"NC_020810.1_7321">gaagtggaac aatcac=
+caga gactagagtc taccatagat gtcttctcag ttctagataa</span>
+     7381 <span class=3D"ff_line" id=3D"NC_020810.1_7381">ggtattcggg cttaaa=
+aaag tcttctctag aacccatgag ttctttcaaa aatcctggat</span>
+     7441 <span class=3D"ff_line" id=3D"NC_020810.1_7441">ctattattct gacaga=
+tcag acctcattgg cctgtggaga gatcagatat actgcctaga</span>
+     7501 <span class=3D"ff_line" id=3D"NC_020810.1_7501">catgagcaat ggcccc=
+acat gctggaacgg tcaggacggt ggacttgaag gtctaagaca</span>
+     7561 <span class=3D"ff_line" id=3D"NC_020810.1_7561">aaaagggtgg agtcta=
+gtaa gtctcttaat gattgacaga gaatcacaaa cccgcaacac</span>
+     7621 <span class=3D"ff_line" id=3D"NC_020810.1_7621">aagaaccaag attttg=
+gcac agggagacaa tcaggtgtta tgccccacat atatgttgtc</span>
+     7681 <span class=3D"ff_line" id=3D"NC_020810.1_7681">tcctgggttg aacaag=
+gagg ggcttctcta tgaactagac agcatatcta ggaatgccat</span>
+     7741 <span class=3D"ff_line" id=3D"NC_020810.1_7741">ctctatatat agggcc=
+attg aagatggagc tgcaaagctt ggtctgataa tcaaaaagga</span>
+     7801 <span class=3D"ff_line" id=3D"NC_020810.1_7801">agagacaatg tgcagt=
+tatg actttttgat ctatgggaag acccctttgt ttcgaggcaa</span>
+     7861 <span class=3D"ff_line" id=3D"NC_020810.1_7861">catactggtg ccagaa=
+tcta agcgatgggc tagagtctca tgtatttcca acgatcagat</span>
+     7921 <span class=3D"ff_line" id=3D"NC_020810.1_7921">tgttaatttg gcaaac=
+ataa tgtcgacggt atctaccaat gcattgactg ttgcccagca</span>
+     7981 <span class=3D"ff_line" id=3D"NC_020810.1_7981">ctcccaatcc ctgata=
+aaac caatgagaga tttccttttg atgtctgttc aagctgtctt</span>
+     8041 <span class=3D"ff_line" id=3D"NC_020810.1_8041">tcactatctt ttattt=
+agtc cgatcttgaa gaatagagta tacaaaatcc ttgtggccga</span>
+     8101 <span class=3D"ff_line" id=3D"NC_020810.1_8101">tggaactgaa ttcttg=
+ctgg cgatgtcaag gataatttat ttggaccctt ccctgggtgg</span>
+     8161 <span class=3D"ff_line" id=3D"NC_020810.1_8161">ggtctcaggg atgtct=
+ctag gaaggttcca catccgccaa ttctctgatc cggtgtccga</span>
+     8221 <span class=3D"ff_line" id=3D"NC_020810.1_8221">gggcttgtca ttctgg=
+agag agatttggtc tagttcctct gagacttgga ttcactccct</span>
+     8281 <span class=3D"ff_line" id=3D"NC_020810.1_8281">gtgtcaagaa gcaggg=
+aatc cagatcttgg tgaaaggagt ttagagagtt tcacgaggct</span>
+     8341 <span class=3D"ff_line" id=3D"NC_020810.1_8341">cttagaagat ccgact=
+accc tgaatatcag aggaggggca agtcccacca tcctactcaa</span>
+     8401 <span class=3D"ff_line" id=3D"NC_020810.1_8401">agaggcaatc agaaaa=
+gcat tatacgacga ggtcgacaaa gttgagaact cagagttcag</span>
+     8461 <span class=3D"ff_line" id=3D"NC_020810.1_8461">agaagcaatc ttgcta=
+tcca aaactcaccg ggacaacttt atattgttct taaggtctgt</span>
+     8521 <span class=3D"ff_line" id=3D"NC_020810.1_8521">ggagcctctg tttcca=
+agat ttctcagtga gttgttcagc tcatctttcc taggcatccc</span>
+     8581 <span class=3D"ff_line" id=3D"NC_020810.1_8581">tgagtctatc attggt=
+ctca tccaaaactc aagaacaatt agaagacagt ttaggaagag</span>
+     8641 <span class=3D"ff_line" id=3D"NC_020810.1_8641">tctatctcgg actcta=
+gagg agtctttctt cagctcagag attcaaggaa tcagtcgagt</span>
+     8701 <span class=3D"ff_line" id=3D"NC_020810.1_8701">gacccaagtg gctcaa=
+aaaa taggaagggt ttggaggtgt tccgcagaga gggcagacca</span>
+     8761 <span class=3D"ff_line" id=3D"NC_020810.1_8761">gctccgggaa atatcc=
+tggg gcaggaaagt tgtggggaca actgtccctc acccatccga</span>
+     8821 <span class=3D"ff_line" id=3D"NC_020810.1_8821">gatgttgtcc atgata=
+ccta agtcgtccat ctcctgcacc tgtggacagc tagaagatga</span>
+     8881 <span class=3D"ff_line" id=3D"NC_020810.1_8881">caatccccgt atctct=
+gtgt cagtccttcc gtccttcgac caaacttttt tctcccgagg</span>
+     8941 <span class=3D"ff_line" id=3D"NC_020810.1_8941">gcctctcaaa ggttat=
+ttgg gttcttccac ctctatgtcc actcagttgt tccatgcatg</span>
+     9001 <span class=3D"ff_line" id=3D"NC_020810.1_9001">ggaaaaagtc acaaac=
+gttc atgtggtcaa gagagcccta tctcttaagg aatcaatcaa</span>
+     9061 <span class=3D"ff_line" id=3D"NC_020810.1_9061">ctggttcata tcgaga=
+gact ctaatttggc gcacacattg attcgtaata ttgtatctct</span>
+     9121 <span class=3D"ff_line" id=3D"NC_020810.1_9121">gactggccct tccttt=
+cctc ttgaggaggc tcccgtgttc aaaaggactg gatctgctct</span>
+     9181 <span class=3D"ff_line" id=3D"NC_020810.1_9181">gcatcgtttc aagtct=
+gcca gatacagtga agggggatac tcttccattt gtcccaacct</span>
+     9241 <span class=3D"ff_line" id=3D"NC_020810.1_9241">attgtcccac atctct=
+gtga gtacagatac catgtcagat ctcacgcaag atgggacaaa</span>
+     9301 <span class=3D"ff_line" id=3D"NC_020810.1_9301">ctttgacttt atgttc=
+cagc ctttaatgct ttatgcccaa acgtggacct ctgagctggt</span>
+     9361 <span class=3D"ff_line" id=3D"NC_020810.1_9361">ccaaaaagac ttgaga=
+ctga aggattccac attccattgg catctcagat gtgtcagatg</span>
+     9421 <span class=3D"ff_line" id=3D"NC_020810.1_9421">tgtcaggccg atagat=
+gata tcactctcga ggccccgaat gtcttctcct ttccagatgt</span>
+     9481 <span class=3D"ff_line" id=3D"NC_020810.1_9481">ttctagaaga atatct=
+cgaa tggtatcagg ggctgttcct caattccaaa aactgccaga</span>
+     9541 <span class=3D"ff_line" id=3D"NC_020810.1_9541">aatctctttg aagcca=
+ggta agttcgagac cctcagtggg aaagatcaat ccaaacacat</span>
+     9601 <span class=3D"ff_line" id=3D"NC_020810.1_9601">tgggacagcc cagggt=
+ctct tgtactctat attggtggct atccatgatt cagggtacaa</span>
+     9661 <span class=3D"ff_line" id=3D"NC_020810.1_9661">tgatggaacc gttttc=
+ccag tcaacatata caagagagtg tctcccagag actatctcag</span>
+     9721 <span class=3D"ff_line" id=3D"NC_020810.1_9721">agggctagcg agaggt=
+gtct tgatagggtc ctccatttgc ttcttaaccc ggatgaccag</span>
+     9781 <span class=3D"ff_line" id=3D"NC_020810.1_9781">cattaacatc aatcgc=
+ccgt tggagctgat ttctggagtc atctcttaca ttttgttgag</span>
+     9841 <span class=3D"ff_line" id=3D"NC_020810.1_9841">actcgacaac cacccc=
+tccc tgtatgtcat gttgaaagaa ccctctctca ggctcgagat</span>
+     9901 <span class=3D"ff_line" id=3D"NC_020810.1_9901">attttccatc cctcaa=
+aaaa tacccgctgc gtatccgaca accatgaagg agggcaacag</span>
+     9961 <span class=3D"ff_line" id=3D"NC_020810.1_9961">gtctgtctta tgctat=
+ctgc aacatgtgct gagatatgaa agagaagcca taacagcatc</span>
+    10021 <span class=3D"ff_line" id=3D"NC_020810.1_10021">accagagtgc gactg=
+gttgt ggattttctc tgatttcaga agcattaaga tgacttattt</span>
+    10081 <span class=3D"ff_line" id=3D"NC_020810.1_10081">aactctgatc acata=
+tcagt ctcacctttt actgcaaaaa atagatagga acttatcaaa</span>
+    10141 <span class=3D"ff_line" id=3D"NC_020810.1_10141">gcagatgaga gttca=
+gttga ggcaactgaa ttccctgatg agacaggtgt taggtgggca</span>
+    10201 <span class=3D"ff_line" id=3D"NC_020810.1_10201">tggagaaggc tcttt=
+agact ctgctgacga cattcacggg ttgttaagag acgctctaca</span>
+    10261 <span class=3D"ff_line" id=3D"NC_020810.1_10261">acgaacacga tgggt=
+tgacc aggaggtccg ccatgcagcc aaggcgatga aatgtgacta</span>
+    10321 <span class=3D"ff_line" id=3D"NC_020810.1_10321">cagtcctcaa aagag=
+atcat caaggaaagc tagtagttct gaatggatat gctcagctca</span>
+    10381 <span class=3D"ff_line" id=3D"NC_020810.1_10381">acagattgcc atatc=
+gacct cttcaaatcc tgccccgaca tctgagattg atatcagagc</span>
+    10441 <span class=3D"ff_line" id=3D"NC_020810.1_10441">attgtctagg aagtt=
+gcaaa atcctcttat ttctggcctt cgagttgttc aatgggctac</span>
+    10501 <span class=3D"ff_line" id=3D"NC_020810.1_10501">tggagcccat tataa=
+gctta aaccgatcct caacgagcta gatacatatc ccacattgtg</span>
+    10561 <span class=3D"ff_line" id=3D"NC_020810.1_10561">tttggtagtg ggtga=
+tggtt ccgggggaat ttcaagggca gtgctgagca tgttccctga</span>
+    10621 <span class=3D"ff_line" id=3D"NC_020810.1_10621">tgctaaatta gtttt=
+taata gtctcttgga ggtcagtgac ttgatggctt cagggacaca</span>
+    10681 <span class=3D"ff_line" id=3D"NC_020810.1_10681">cccattacct ccctc=
+cgcgt tggtaagtgg aggagaggat atcatatctc gagttattga</span>
+    10741 <span class=3D"ff_line" id=3D"NC_020810.1_10741">cttccagtcc atctg=
+ggaga agccttcaga tttgagaaac ccatcaactt ggaggtattt</span>
+    10801 <span class=3D"ff_line" id=3D"NC_020810.1_10801">ccagagtgtc caaca=
+aacca ccaacatgtc atatgatctg ataatttgtg atgcagaagt</span>
+    10861 <span class=3D"ff_line" id=3D"NC_020810.1_10861">tacagacatt tcctc=
+gatca acaagataac cttgttaatg tctgatttct ccctgtcgat</span>
+    10921 <span class=3D"ff_line" id=3D"NC_020810.1_10921">caatggtcct ctgag=
+tttaa ttttcaagac ttacgggaca atgttggtta atcctgacta</span>
+    10981 <span class=3D"ff_line" id=3D"NC_020810.1_10981">cagggctatt cagca=
+tctct ctagggcatt cccttcagca gcagggtata taacgcaggt</span>
+    11041 <span class=3D"ff_line" id=3D"NC_020810.1_11041">gacctcttca ttctc=
+ttcag aactttactt gaagttctca aagcgaggga agttttttag</span>
+    11101 <span class=3D"ff_line" id=3D"NC_020810.1_11101">agaccctgag cattt=
+aacat catctacctt gagagaaatg agcctggtgc tctttaattg</span>
+    11161 <span class=3D"ff_line" id=3D"NC_020810.1_11161">cagcagctcc aagag=
+cgaga tgctgagagc argatcatta aactatcaag atcttgttag</span>
+    11221 <span class=3D"ff_line" id=3D"NC_020810.1_11221">gggatttcca gaaga=
+aatca tatcaaatcc atacaatgag atgataataa ccctcataga</span>
+    11281 <span class=3D"ff_line" id=3D"NC_020810.1_11281">taacgatgta gagtc=
+attcc ttgttcacaa gatgattgat gacctggagc ttcaacgagg</span>
+    11341 <span class=3D"ff_line" id=3D"NC_020810.1_11341">ggcgttctcc aaact=
+gtcaa tcatactaac catcatggtg gtgttttcta atagagtgtt</span>
+    11401 <span class=3D"ff_line" id=3D"NC_020810.1_11401">caatgtgtct aagcc=
+tttga cagacactaa gttctaccca ccgtcagacc cgaagatctt</span>
+    11461 <span class=3D"ff_line" id=3D"NC_020810.1_11461">aaaacacttc aatat=
+ctgtt gtagcactct cttgtactta tcagttgctt tgggtgatgt</span>
+    11521 <span class=3D"ff_line" id=3D"NC_020810.1_11521">cctcaacttt gcccg=
+actcc atgaacttta caacaaccct ataacatatt attttaggaa</span>
+    11581 <span class=3D"ff_line" id=3D"NC_020810.1_11581">gcaagtgata ggagg=
+gagaa tgtatttggc ctggagctgg tcacacagta catcggtctt</span>
+    11641 <span class=3D"ff_line" id=3D"NC_020810.1_11641">taagagagtt gcttg=
+caact caaatctgag tctgtccgcg cactggattc ggctgatcta</span>
+    11701 <span class=3D"ff_line" id=3D"NC_020810.1_11701">taaagtcgtc aagac=
+aacaa gactcactgg aggccccaag gacctgtctc gagagatgga</span>
+    11761 <span class=3D"ff_line" id=3D"NC_020810.1_11761">aagacatcta aagag=
+ctaca acagatggat caactttgat gatctccgat ccagatcatc</span>
+    11821 <span class=3D"ff_line" id=3D"NC_020810.1_11821">tctgttggat tatag=
+tggtc tttaagtatc tctgaccata atattatata tgtccccaaa</span>
+    11881 <span class=3D"ff_line" id=3D"NC_020810.1_11881">agccatacca gagaa=
+catga aaaaaacatt tgaaacattc tgtacttctg cccccttgac</span>
+    11941 <span class=3D"ff_line" id=3D"NC_020810.1_11941">tcattttgtg tcttg=
+tttgt tttttttgtt aagcgt</span>
+//</pre>
+</body></html>
+------MultipartBoundary--pwlAxAkyf56LfkzylmQey2LSXx2BDBsmXJXGEXEn7x------
