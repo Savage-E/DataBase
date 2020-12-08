@@ -112,10 +112,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="Resources\Data\TestSequence.txt" />
     <None Include="Resources\References.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Data;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace DataBase
@@ -11,12 +13,12 @@ namespace DataBase
         private string openFileName, folderName;
 
         private bool fileOpened = false;
+
         public MainForm()
         {
             InitializeComponent();
             DataGridVievLoad();
         }
-
 
         private void DataGridVievLoad()
         {
@@ -24,6 +26,7 @@ namespace DataBase
             try
             {
                 string[] lines = File.ReadAllLines(@"F:\repos\DataBase\Resources\References.csv");
+                //     string[] files= CheckFiles(lines);
                 if (lines.Length > 0)
                 {
                     //first line to create header
@@ -59,7 +62,7 @@ namespace DataBase
                     dataGridViewMain.AllowUserToAddRows = false;
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 MessageBox.Show("Не удалось найти файл References.csv");
             }
@@ -72,9 +75,7 @@ namespace DataBase
             if (result == DialogResult.OK)
             {
                 folderName = folderBrowserDialog1.SelectedPath;
-
-
-                var fileList = Directory.GetFiles(folderName, " *.mhtml");
+                var fileList = Directory.GetFiles(folderName, "*.mhtml");
 
                 ParseFiles(fileList);
             }
@@ -83,7 +84,7 @@ namespace DataBase
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             StringBuilder fileCSV = new StringBuilder("Title;filePath;Comments\t\n");
-            int rows = dataGridViewMain.RowCount - 1;
+            int rows = dataGridViewMain.RowCount;
             int columns = dataGridViewMain.ColumnCount;
             for (int i = 0; i < rows; i++)
             {
@@ -108,16 +109,145 @@ namespace DataBase
             wr.Close();
         }
 
-        private void PrintDataToDGV()
+        private void AppendDataToDGV()
         {
-
         }
 
         private void ParseFiles(string[] files)
         {
+            string[] uniqFiles = CheckFiles(files);
 
+            foreach (string f in uniqFiles)
+            {
+                StringBuilder sb = new StringBuilder("Аминокислотная последовательность:\n");
 
+                int seq = 1;
+                string[] file = File.ReadAllLines(f);
+
+                string str = "translation=3D";
+                bool origin = false;
+                bool flag = false;
+                foreach (string l in file)
+                {
+                    if (l.Contains(str))
+                    {
+                        switch (seq)
+                        {
+                            case 1:
+                                sb.Append("\n\nN : ");
+                                seq++;
+                                break;
+
+                            case 2:
+                                sb.Append("\n\nP : ");
+                                seq++;
+                                break;
+
+                            case 3:
+                                sb.Append("\n\nM : ");
+                                seq++;
+                                break;
+
+                            case 4:
+                                sb.Append("\n\nG : ");
+                                seq++;
+                                break;
+
+                            case 5:
+                                sb.Append("\n\nL : ");
+                                seq++;
+                                break;
+                        }
+
+                        sb.Append(l.Trim().Substring(15).Trim('='));
+
+                        flag = true;
+                    }
+                    else if (flag && !l.Contains("</span>"))
+                    {
+                        if (l.Trim().Length > 10)
+                            sb.Append("\n" + (l.Trim('=', ' ')));
+                        else
+                        {
+                            sb.Append(l.Trim());
+                        }
+                    }
+                    else if (l.Contains("ORIGIN"))
+                    {
+                        origin = true;
+                        sb.Append("\nНуклеотидная последовательность : \n");
+                    }
+                    else if (origin)
+                    {
+                     
+                        Regex regex = new Regex(@"((>|^)\s*\d*)|([abctg=]{2,})");
+                        MatchCollection collection = regex.Matches(l);
+                        
+                        if (collection.Count > 0)
+                        {
+                            foreach (Match match in collection)
+                            {
+                                
+
+                                            sb.Append(match.Value.Trim('>', ' ','=') + " ");
+                                            
+                            }
+
+                            if (collection.Count>4)
+                            {
+                                sb.Append("\n");
+                            }
+                            
+                        }
+                    
+                    }
+                    else
+                    {
+                        flag = false;
+                    }
+                }
+
+                string filename = Path.GetFileName(f);
+                DataTable dataTable = (DataTable)dataGridViewMain.DataSource;
+                DataRow dr = dataTable.NewRow();
+                dr["Title"] = filename;
+                dr["filePath"] = f;
+                dr[2] = "";
+
+                dataTable.Rows.Add(dr);
+                dataGridViewMain.DataSource = dataTable;
+                WriteToFile(sb, filename);
+            }
         }
 
+        private string[] CheckFiles(String[] files)
+        {
+            ArrayList filesArrayList = new ArrayList(files);
+            ArrayList resultList = new ArrayList(files);
+            string references = File.ReadAllText(@"F:\repos\DataBase\Resources\References.csv");
+
+            foreach (var el in filesArrayList)
+            {
+                if (references.Contains(el.ToString()))
+                {
+                    resultList.Remove(el);
+                }
+            }
+
+            string[] result = resultList.ToArray(typeof(string)) as string[];
+
+            return result;
+        }
+
+        private void WriteToFile(StringBuilder sb, string title)
+        {
+            string filePath = @"F:\repos\DataBase\Resources\Data\" + title + ".txt";
+            //            String str = sb.ToString();
+
+            using (StreamWriter file = new System.IO.StreamWriter(filePath))
+            {
+                file.WriteLine(sb.ToString());
+            }
+        }
     }
 }
