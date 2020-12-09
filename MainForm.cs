@@ -25,8 +25,8 @@ namespace DataBase
             DataTable dt = new DataTable();
             try
             {
-                string[] lines = File.ReadAllLines(@"F:\repos\DataBase\Resources\References.csv");
-                //     string[] files= CheckFiles(lines);
+                string[] lines = File.ReadAllLines("Resources/References.csv");
+                
                 if (lines.Length > 0)
                 {
                     //first line to create header
@@ -102,11 +102,15 @@ namespace DataBase
                     fileCSV.Append("\t\n");
                 }
             }
-
-            StreamWriter wr = new StreamWriter(@"F:\repos\DataBase\Resources\References.csv", false,
-                Encoding.GetEncoding("windows-1251"));
-            wr.Write(fileCSV);
-            wr.Close();
+            using (StreamWriter file = new StreamWriter("Resources/References.csv",false, Encoding.GetEncoding("windows-1251")))
+            {
+                file.WriteLine(fileCSV);
+            }
+            //StreamWriter wr = new StreamWriter(  "Resources/References.csv", false,
+              //  Encoding.GetEncoding("windows-1251"));
+            
+            //wr.Write(fileCSV);
+            //wr.Close();
         }
 
         private void AppendDataToDGV()
@@ -193,7 +197,7 @@ namespace DataBase
                                     sb.Append(match.Value.Trim('>', ' ', '=') + " ");
                                 else if (match.Value.Length >= 6)
                                 {
-                                    sb.Append(" "+match.Value.Trim('>', ' ', '='));
+                                    sb.Append(" " + match.Value.Trim('>', ' ', '='));
                                 }
                             }
 
@@ -212,7 +216,7 @@ namespace DataBase
                 DataRow dr;
                 string filename = Path.GetFileName(f);
                 string[] title = filename.Split('.');
-                string filePath = @"F:\repos\DataBase\Resources\Data\" + title[0] + ".txt";
+                string filePath = Directory.GetCurrentDirectory()+ "/Resources/Data/" + title[0] + ".txt";
 
                 if (dataGridViewMain.RowCount == 0)
                 {
@@ -275,8 +279,7 @@ namespace DataBase
 
         private void WriteToFile(StringBuilder sb, string title)
         {
-            string filePath = @"F:\repos\DataBase\Resources\Data\" + title + ".txt";
-            //            String str = sb.ToString();
+            string filePath = "Resources/Data/" + title + ".txt";
 
             using (StreamWriter file = new StreamWriter(filePath))
             {
