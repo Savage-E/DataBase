@@ -119,7 +119,7 @@ namespace DataBase
 
             foreach (string f in uniqFiles)
             {
-                StringBuilder sb = new StringBuilder("Аминокислотная последовательность:\n");
+                StringBuilder sb = new StringBuilder("Аминокислотная последовательность:");
 
                 int seq = 1;
                 string[] file = File.ReadAllLines(f);
@@ -179,27 +179,29 @@ namespace DataBase
                     }
                     else if (origin)
                     {
-                     
-                        Regex regex = new Regex(@"((>|^)\s*\d*)|([abctg=]{2,})");
+                        Regex regex = new Regex(@"([acbtg=]{2,})|((>|^)\s*\d*)");
                         MatchCollection collection = regex.Matches(l);
-                        
+
                         if (collection.Count > 0)
                         {
                             foreach (Match match in collection)
                             {
-                                
-
-                                            sb.Append(match.Value.Trim('>', ' ','=') + " ");
-                                            
+                                int number;
+                                if (Int32.TryParse(match.Value, out number))
+                                    sb.Append(number + " ");
+                                else if (match.Value.Length < 6)
+                                    sb.Append(match.Value.Trim('>', ' ', '=') + " ");
+                                else if (match.Value.Length >= 6)
+                                {
+                                    sb.Append(" "+match.Value.Trim('>', ' ', '='));
+                                }
                             }
 
-                            if (collection.Count>4)
+                            if (collection.Count > 5)
                             {
                                 sb.Append("\n");
                             }
-                            
                         }
-                    
                     }
                     else
                     {
@@ -207,16 +209,40 @@ namespace DataBase
                     }
                 }
 
+                DataRow dr;
                 string filename = Path.GetFileName(f);
-                DataTable dataTable = (DataTable)dataGridViewMain.DataSource;
-                DataRow dr = dataTable.NewRow();
-                dr["Title"] = filename;
-                dr["filePath"] = f;
-                dr[2] = "";
+                string[] title = filename.Split('.');
+                string filePath = @"F:\repos\DataBase\Resources\Data\" + title[0] + ".txt";
 
-                dataTable.Rows.Add(dr);
-                dataGridViewMain.DataSource = dataTable;
-                WriteToFile(sb, filename);
+                if (dataGridViewMain.RowCount == 0)
+                {
+                    DataTable dt = new DataTable();
+
+                    dt.Columns.Add(new DataColumn("Title"));
+                    dt.Columns.Add(new DataColumn("filePath"));
+                    dt.Columns.Add(new DataColumn("Comments"));
+
+                    dr = dt.NewRow();
+                    dr["Title"] = title[0];
+                    dr["filePath"] = filePath;
+                    dr[2] = "";
+
+                    dt.Rows.Add(dr);
+                    dataGridViewMain.DataSource = dt;
+                    dataGridViewMain.AllowUserToAddRows = false;
+                }
+                else
+                {
+                    DataTable dataTable = (DataTable)dataGridViewMain.DataSource;
+                    dr = dataTable.NewRow();
+                    dr["Title"] = title[0];
+                    dr["filePath"] = filePath;
+                    dr[2] = "";
+
+                    dataGridViewMain.DataSource = dataTable;
+                }
+
+                WriteToFile(sb, title[0]);
             }
         }
 
@@ -239,12 +265,20 @@ namespace DataBase
             return result;
         }
 
+        private void _deleteRowBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewMain.SelectedRows.Count > 0)
+            {
+                dataGridViewMain.Rows.RemoveAt(dataGridViewMain.SelectedRows[0].Index);
+            }
+        }
+
         private void WriteToFile(StringBuilder sb, string title)
         {
             string filePath = @"F:\repos\DataBase\Resources\Data\" + title + ".txt";
             //            String str = sb.ToString();
 
-            using (StreamWriter file = new System.IO.StreamWriter(filePath))
+            using (StreamWriter file = new StreamWriter(filePath))
             {
                 file.WriteLine(sb.ToString());
             }

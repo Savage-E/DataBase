@@ -31,6 +31,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this._folderOpenBtn = new System.Windows.Forms.Button();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
+            this._deleteRowBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,11 +55,22 @@
             this.dataGridViewMain.Size = new System.Drawing.Size(750, 277);
             this.dataGridViewMain.TabIndex = 1;
             // 
+            // _deleteRowBtn
+            // 
+            this._deleteRowBtn.Location = new System.Drawing.Point(637, 373);
+            this._deleteRowBtn.Name = "_deleteRowBtn";
+            this._deleteRowBtn.Size = new System.Drawing.Size(141, 41);
+            this._deleteRowBtn.TabIndex = 2;
+            this._deleteRowBtn.Text = "Удалить запись";
+            this._deleteRowBtn.UseVisualStyleBackColor = true;
+            this._deleteRowBtn.Click += new System.EventHandler(this._deleteRowBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this._deleteRowBtn);
             this.Controls.Add(this.dataGridViewMain);
             this.Controls.Add(this._folderOpenBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -75,6 +87,7 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button _folderOpenBtn;
         private System.Windows.Forms.DataGridView dataGridViewMain;
+        private System.Windows.Forms.Button _deleteRowBtn;
     }
 }
 
