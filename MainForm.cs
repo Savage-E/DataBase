@@ -22,6 +22,8 @@ namespace DataBase
 
         private void DataGridVievLoad()
         {
+            dataGridViewMain.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.AllCells;
             DataTable dt = new DataTable();
             try
             {
@@ -106,11 +108,6 @@ namespace DataBase
             {
                 file.WriteLine(fileCSV);
             }
-            //StreamWriter wr = new StreamWriter(  "Resources/References.csv", false,
-              //  Encoding.GetEncoding("windows-1251"));
-            
-            //wr.Write(fileCSV);
-            //wr.Close();
         }
 
         private void AppendDataToDGV()
@@ -254,7 +251,7 @@ namespace DataBase
         {
             ArrayList filesArrayList = new ArrayList(files);
             ArrayList resultList = new ArrayList(files);
-            string references = File.ReadAllText(@"F:\repos\DataBase\Resources\References.csv");
+            string references = File.ReadAllText("Resources/References.csv");
 
             foreach (var el in filesArrayList)
             {
@@ -275,6 +272,12 @@ namespace DataBase
             {
                 dataGridViewMain.Rows.RemoveAt(dataGridViewMain.SelectedRows[0].Index);
             }
+        }
+
+        private void _nameTbx_TextChanged(object sender, EventArgs e)
+        {
+            (dataGridViewMain.DataSource as DataTable).DefaultView.RowFilter =
+                String.Format("Title like '{0}%'", _nameTbx.Text);
         }
 
         private void WriteToFile(StringBuilder sb, string title)
