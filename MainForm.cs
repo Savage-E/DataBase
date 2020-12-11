@@ -1,26 +1,25 @@
 ﻿using System;
-using System.Collections;
 using System.Data;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace DataBase
 {
     public partial class MainForm : Form
     {
-        private string openFileName, folderName;
-
-        private bool fileOpened = false;
+        private string folderName;
 
         public MainForm()
         {
             InitializeComponent();
-            DataGridVievLoad();
+            DataGridViewLoad();
         }
 
-        private void DataGridVievLoad()
+        /// <summary>
+        /// Loads data from specified file to DataGridView
+        /// </summary>
+        private void DataGridViewLoad()
         {
             dataGridViewMain.AutoSizeColumnsMode =
                 DataGridViewAutoSizeColumnsMode.AllCells;
@@ -28,10 +27,10 @@ namespace DataBase
             try
             {
                 string[] lines = File.ReadAllLines("Resources/References.csv");
-                
+
                 if (lines.Length > 0)
                 {
-                    //first line to create header
+                    //First line to create header
                     string firstLine = lines[0];
                     string[] headerLabels = firstLine.Split(';');
                     foreach (string headerWord in headerLabels)
@@ -70,6 +69,11 @@ namespace DataBase
             }
         }
 
+        /// <summary>
+        /// Takes folder name with specified files
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _folderOpenBtn_Click(object sender, EventArgs e)
         {
             // Show the FolderBrowserDialog.
@@ -83,11 +87,17 @@ namespace DataBase
             }
         }
 
+        /// <summary>
+        /// Unloads data from DataGridView to file References
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            StringBuilder fileCSV = new StringBuilder("Title;filePath;Comments\t\n");
             int rows = dataGridViewMain.RowCount;
             int columns = dataGridViewMain.ColumnCount;
+            StringBuilder fileCSV = new StringBuilder("Title;filePath;Comments\t\n");
+
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
@@ -104,121 +114,25 @@ namespace DataBase
                     fileCSV.Append("\t\n");
                 }
             }
-            using (StreamWriter file = new StreamWriter("Resources/References.csv",false, Encoding.GetEncoding("windows-1251")))
-            {
-                file.WriteLine(fileCSV);
-            }
+
+            Tools.WriteToFile(fileCSV);
         }
 
-        private void AppendDataToDGV()
+        /// <summary>
+        /// Appends data to DataGridView
+        /// </summary>
+        /// <param name="sb"></param>
+        /// <param name="files"></param>
+        private void AppendDataToDGV(StringBuilder sb, string[] files)
         {
-        }
-
-        private void ParseFiles(string[] files)
-        {
-            string[] uniqFiles = CheckFiles(files);
+            string[] uniqFiles = Tools.CheckFiles(files);
 
             foreach (string f in uniqFiles)
             {
-                StringBuilder sb = new StringBuilder("Аминокислотная последовательность:");
-
-                int seq = 1;
-                string[] file = File.ReadAllLines(f);
-
-                string str = "translation=3D";
-                bool origin = false;
-                bool flag = false;
-                foreach (string l in file)
-                {
-                    if (l.Contains(str))
-                    {
-                        switch (seq)
-                        {
-                            case 1:
-                                sb.Append("\n\nN : ");
-                                seq++;
-                                break;
-
-                            case 2:
-                                sb.Append("\n\nP : ");
-                                seq++;
-                                break;
-
-                            case 3:
-                                sb.Append("\n\nM : ");
-                                seq++;
-                                break;
-
-                            case 4:
-                                sb.Append("\n\nG : ");
-                                seq++;
-                                break;
-
-                            case 5:
-                                sb.Append("\n\nL : ");
-                                seq++;
-                                break;
-                        }
-
-                        sb.Append(l.Trim().Substring(15).Trim('='));
-
-                        flag = true;
-                    }
-                    else if (flag && !l.Contains("</span>"))
-                    {
-                        if (l.Trim().Length > 10)
-                            sb.Append("\n" + (l.Trim('=', ' ')));
-                        else
-                        {
-                            sb.Append(l.Trim());
-                        }
-                    }
-                    else if (l.Contains("ORIGIN"))
-                    {
-                        origin = true;
-                        flag = false;
-                        sb.Append("\nНуклеотидная последовательность : \n");
-                    }
-                    else if (origin )
-                    {
-                        Regex regex = new Regex(@"([acbtg=]{2,})|((>|^)\s*\d*)");
-                        MatchCollection collection = regex.Matches(l);
-
-                        if (collection.Count > 0)
-                        {
-                            foreach (Match match in collection)
-                            {
-                                int number;
-                                if (Int32.TryParse(match.Value, out number))
-                                    sb.Append(number + " ");
-                                else if (match.Value.Length < 6)
-                                    sb.Append(match.Value.Trim('>', ' ', '=') + " ");
-                                else if (match.Value.Length >= 6)
-                                {
-                                    sb.Append(" " + match.Value.Trim('>', ' ', '='));
-                                }
-                            }
-
-                            if (collection.Count > 5)
-                            {
-                                sb.Append("\n");
-                            }
-                        }
-
-                        if (l.Contains("//</pre>"))
-                            break;
-                    }
-                    
-                    else
-                    {
-                        flag = false;
-                    }
-                }
-
                 DataRow dr;
                 string filename = Path.GetFileName(f);
                 string[] title = filename.Split('.');
-                string filePath = Directory.GetCurrentDirectory()+ "/Resources/Data/" + title[0] + ".txt";
+                string filePath = Directory.GetCurrentDirectory() + "/Resources/Data/" + title[0] + ".txt";
 
                 if (dataGridViewMain.RowCount == 0)
                 {
@@ -235,7 +149,6 @@ namespace DataBase
 
                     dt.Rows.Add(dr);
                     dataGridViewMain.DataSource = dt;
-                    
                 }
                 else
                 {
@@ -248,30 +161,31 @@ namespace DataBase
                     dataGridViewMain.DataSource = dataTable;
                 }
 
-                WriteToFile(sb, title[0]);
+                Tools.WriteToFile(sb, title[0]);
             }
+
             dataGridViewMain.AllowUserToAddRows = false;
         }
 
-        private string[] CheckFiles(String[] files)
+        /// <summary>
+        /// Parses file on specified sequences
+        /// </summary>
+        /// <param name="files">the files to extract</param>
+        private void ParseFiles(string[] files)
         {
-            ArrayList filesArrayList = new ArrayList(files);
-            ArrayList resultList = new ArrayList(files);
-            string references = File.ReadAllText("Resources/References.csv");
+            StringBuilder sb = Tools.ParseFiles((files));
 
-            foreach (var el in filesArrayList)
+            if (sb.Length != 0)
             {
-                if (references.Contains(el.ToString()))
-                {
-                    resultList.Remove(el);
-                }
+                AppendDataToDGV(sb, files);
             }
-
-            string[] result = resultList.ToArray(typeof(string)) as string[];
-
-            return result;
         }
 
+        /// <summary>
+        /// Removes selected row
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _deleteRowBtn_Click(object sender, EventArgs e)
         {
             if (dataGridViewMain.SelectedRows.Count > 0)
@@ -280,20 +194,15 @@ namespace DataBase
             }
         }
 
+        /// <summary>
+        /// Show data that match to input in TextBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _nameTbx_TextChanged(object sender, EventArgs e)
         {
             (dataGridViewMain.DataSource as DataTable).DefaultView.RowFilter =
-                String.Format("Title like '{0}%'", _nameTbx.Text);
-        }
-
-        private void WriteToFile(StringBuilder sb, string title)
-        {
-            string filePath = "Resources/Data/" + title + ".txt";
-
-            using (StreamWriter file = new StreamWriter(filePath))
-            {
-                file.WriteLine(sb.ToString());
-            }
+                $"Title like '{_nameTbx.Text}%'";
         }
     }
 }
