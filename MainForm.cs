@@ -123,7 +123,7 @@ namespace DataBase
         /// </summary>
         /// <param name="sb"></param>
         /// <param name="files"></param>
-        private void AppendDataToDGV(StringBuilder sb, string[] files)
+        private void AppendDataToDGV( string[] files)
         {
             string[] uniqFiles = Tools.CheckFiles(files);
 
@@ -161,7 +161,6 @@ namespace DataBase
                     dataGridViewMain.DataSource = dataTable;
                 }
 
-                Tools.WriteToFile(sb, title[0]);
             }
 
             dataGridViewMain.AllowUserToAddRows = false;
@@ -173,11 +172,11 @@ namespace DataBase
         /// <param name="files">the files to extract</param>
         private void ParseFiles(string[] files)
         {
-            StringBuilder sb = Tools.ParseFiles((files));
+          bool isParsed= Tools.ParseFiles((files));
 
-            if (sb.Length != 0)
+            if (isParsed)
             {
-                AppendDataToDGV(sb, files);
+                AppendDataToDGV( files);
             }
         }
 

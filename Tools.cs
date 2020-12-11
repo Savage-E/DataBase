@@ -74,14 +74,15 @@ namespace DataBase
         /// Parses files on specified sequences
         /// </summary>
         /// <param name="files">the array of files to extract</param>
-        public static StringBuilder ParseFiles(string[] files)
+        public static bool ParseFiles(string[] files)
         {
+            bool result = false;
             string[] uniqFiles = CheckFiles(files);
-            StringBuilder sb = new StringBuilder();
+            StringBuilder  sb = new StringBuilder();
             foreach (string f in uniqFiles)
             {
                 sb = new StringBuilder("Аминокислотная последовательность:");
-
+                string title = Path.GetFileName(f).Split('.')[0];
                 int seq = 1;
                 string[] file = File.ReadAllLines(f);
 
@@ -150,7 +151,7 @@ namespace DataBase
                             foreach (Match match in collection)
                             {
                                 int number;
-                                if (Int32.TryParse(match.Value, out number))
+                                if (Int32.TryParse(match.Value.Trim(), out number))
                                     sb.Append(number + " ");
                                 else if (match.Value.Length < 6)
                                     sb.Append(match.Value.Trim('>', ' ', '=') + " ");
@@ -174,9 +175,13 @@ namespace DataBase
                         flag = false;
                     }
                 }
+
+                WriteToFile(sb,title);
+                result = true;
             }
 
-            return sb;
+
+            return result;
         }
     }
 }
