@@ -176,9 +176,10 @@ namespace DataBase
                     else if (l.Contains("ORIGIN"))
                     {
                         origin = true;
+                        flag = false;
                         sb.Append("\nНуклеотидная последовательность : \n");
                     }
-                    else if (origin)
+                    else if (origin )
                     {
                         Regex regex = new Regex(@"([acbtg=]{2,})|((>|^)\s*\d*)");
                         MatchCollection collection = regex.Matches(l);
@@ -203,7 +204,11 @@ namespace DataBase
                                 sb.Append("\n");
                             }
                         }
+
+                        if (l.Contains("//</pre>"))
+                            break;
                     }
+                    
                     else
                     {
                         flag = false;
@@ -230,7 +235,7 @@ namespace DataBase
 
                     dt.Rows.Add(dr);
                     dataGridViewMain.DataSource = dt;
-                    dataGridViewMain.AllowUserToAddRows = false;
+                    
                 }
                 else
                 {
@@ -239,12 +244,13 @@ namespace DataBase
                     dr["Title"] = title[0];
                     dr["filePath"] = filePath;
                     dr[2] = "";
-
+                    dataTable.Rows.Add(dr);
                     dataGridViewMain.DataSource = dataTable;
                 }
 
                 WriteToFile(sb, title[0]);
             }
+            dataGridViewMain.AllowUserToAddRows = false;
         }
 
         private string[] CheckFiles(String[] files)
