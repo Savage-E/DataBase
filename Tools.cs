@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -20,12 +19,6 @@ namespace DataBase
         /// <returns></returns>
         public static string[] CheckFiles(string[] files)
         {
-            /*string[] title = new string[files.Length];
-            for (int i = 0; i < files.Length; i++)
-            {
-                title[i] = Path.GetFileName(files[i]).Split('.')[0];
-            }*/
-
             ArrayList filesArrayList = new ArrayList(files);
             ArrayList resultList = new ArrayList(files);
             string references = File.ReadAllText("Resources/References.csv");
@@ -78,10 +71,10 @@ namespace DataBase
         {
             bool result = false;
             string[] uniqFiles = CheckFiles(files);
-            StringBuilder  sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             foreach (string f in uniqFiles)
             {
-                sb = new StringBuilder("Аминокислотная последовательность:");
+                sb = new StringBuilder();
                 string title = Path.GetFileName(f).Split('.')[0];
                 int seq = 1;
                 string[] file = File.ReadAllLines(f);
@@ -89,86 +82,61 @@ namespace DataBase
                 string str = "translation=3D";
                 bool origin = false;
                 bool flag = false;
+                string line;
                 foreach (string l in file)
                 {
                     if (l.Contains(str))
                     {
-                        // write title of the sequence
-                        switch (seq)
-                        {
-                            case 1:
-                                sb.Append("\n\nN : ");
-                                seq++;
-                                break;
 
-                            case 2:
-                                sb.Append("\n\nP : ");
-                                seq++;
-                                break;
-
-                            case 3:
-                                sb.Append("\n\nM : ");
-                                seq++;
-                                break;
-
-                            case 4:
-                                sb.Append("\n\nG : ");
-                                seq++;
-                                break;
-
-                            case 5:
-                                sb.Append("\n\nL : ");
-                                seq++;
-                                break;
-                        }
-
-                        sb.Append(l.Trim().Substring(15).Trim('='));
-
+                         line = l.Trim().Substring(15).Trim('=').Trim('"').Trim('\n');
+                        AddToStringBuilder(line,sb);
                         flag = true;
+
                     }
                     else if (flag && !l.Contains("</span>"))
                     {
                         if (l.Trim().Length > 10)
-                            sb.Append("\n" + (l.Trim('=', ' ')));
+                        {
+                            line = l.Trim('=', ' ','"','\n');
+                            AddToStringBuilder(line,sb);
+                            
+                        }
                         else
                         {
-                            sb.Append(l.Trim());
+                            line = l.Trim();
+                            AddToStringBuilder(line,sb);
                         }
                     }
                     else if (l.Contains("ORIGIN"))
                     {
+                        WriteToFile(sb, title +"_AMK");
+                        sb = new StringBuilder();
                         origin = true;
                         flag = false;
-                        sb.Append("\nНуклеотидная последовательность : \n");
                     }
+                    //Parse AMK Sequence.
                     else if (origin)
                     {
-                        Regex regex = new Regex(@"([acbtg=]{2,})|((>|^)\s*\d*)");
+                        Regex regex = new Regex(@"(^[acbtg]{1,})|([acbtg]{2,})");
                         MatchCollection collection = regex.Matches(l);
 
                         if (collection.Count > 0)
                         {
                             foreach (Match match in collection)
                             {
-                                int number;
-                                if (Int32.TryParse(match.Value.Trim(), out number))
-                                    sb.Append(number + " ");
-                                else if (match.Value.Length < 6)
-                                    sb.Append(match.Value.Trim('>', ' ', '=') + " ");
-                                else if (match.Value.Length >= 6)
-                                {
-                                    sb.Append(" " + match.Value.Trim('>', ' ', '='));
-                                }
-                            }
 
-                            if (collection.Count > 5)
-                            {
-                                sb.Append("\n");
+                                line = match.Value.Trim('>', ' ', '=').Trim('\n');
+                                    AddToStringBuilder(line,sb);
+                                    
                             }
+                            
                         }
 
                         if (l.Contains("//</pre>"))
+                        {
+                            WriteToFile(sb, title + "_NK");
                             break;
+                        }
                     }
                     else
                     {
@@ -176,12 +144,19 @@ namespace DataBase
                     }
                 }
 
-                WriteToFile(sb,title);
                 result = true;
             }
 
-
             return result;
+        }
+
+        private static void AddToStringBuilder(string line,StringBuilder sb)
+        {
+            char[] letters = line.ToCharArray();
+            foreach (char c in letters)
+            {
+                sb.AppendLine(c.ToString());
+            }
         }
     }
 }
