@@ -123,7 +123,7 @@ namespace DataBase
         /// </summary>
         /// <param name="sb"></param>
         /// <param name="files"></param>
-        private void AppendDataToDGV(StringBuilder sb, string[] files)
+        private void AppendDataToDGV(string[] files)
         {
             string[] uniqFiles = Tools.CheckFiles(files);
 
@@ -131,37 +131,63 @@ namespace DataBase
             {
                 DataRow dr;
                 string filename = Path.GetFileName(f);
-                string[] title = filename.Split('.');
-                string filePath = Directory.GetCurrentDirectory() + "/Resources/Data/" + title[0] + ".txt";
-
-                if (dataGridViewMain.RowCount == 0)
+                string[] title1 = filename.Split('.');
+                string title2 = title1[0] + "_NK";
+                title1[0] += "_AMK";
+                string filePath1 = Directory.GetCurrentDirectory() + "/Resources/Data/" + title1[0] + ".txt";
+                string filePath2 = Directory.GetCurrentDirectory() + "/Resources/Data/" + title2 + ".txt";
+                int count = 0;
+                while (count < 2)
                 {
-                    DataTable dt = new DataTable();
+                    if (dataGridViewMain.RowCount == 0)
+                    {
+                        DataTable dt = new DataTable();
 
-                    dt.Columns.Add(new DataColumn("Title"));
-                    dt.Columns.Add(new DataColumn("filePath"));
-                    dt.Columns.Add(new DataColumn("Comments"));
+                        dt.Columns.Add(new DataColumn("Title"));
+                        dt.Columns.Add(new DataColumn("filePath"));
+                        dt.Columns.Add(new DataColumn("Comments"));
 
-                    dr = dt.NewRow();
-                    dr["Title"] = title[0];
-                    dr["filePath"] = filePath;
-                    dr[2] = "";
+                        dr = dt.NewRow();
+                        if (count == 0)
+                        {
+                            dr["Title"] = title1[0];
+                            dr["filePath"] = filePath1;
+                            dr[2] = "";
+                            count++;
+                        }
+                        else
+                        {
+                            dr["Title"] = title2;
+                            dr["filePath"] = filePath2;
+                            dr[2] = "";
+                            count++;
+                        }
 
-                    dt.Rows.Add(dr);
-                    dataGridViewMain.DataSource = dt;
+                        dt.Rows.Add(dr);
+                        dataGridViewMain.DataSource = dt;
+                    }
+                    else
+                    {
+                        DataTable dataTable = (DataTable)dataGridViewMain.DataSource;
+                        dr = dataTable.NewRow();
+                        if (count == 0)
+                        {
+                            dr["Title"] = title1[0];
+                            dr["filePath"] = filePath1;
+                            dr[2] = "";
+                            count++;
+                        }
+                        else
+                        {
+                            dr["Title"] = title2;
+                            dr["filePath"] = filePath2;
+                            dr[2] = "";
+                            count++;
+                        }
+                        dataTable.Rows.Add(dr);
+                        dataGridViewMain.DataSource = dataTable;
+                    }
                 }
-                else
-                {
-                    DataTable dataTable = (DataTable)dataGridViewMain.DataSource;
-                    dr = dataTable.NewRow();
-                    dr["Title"] = title[0];
-                    dr["filePath"] = filePath;
-                    dr[2] = "";
-                    dataTable.Rows.Add(dr);
-                    dataGridViewMain.DataSource = dataTable;
-                }
-
-                Tools.WriteToFile(sb, title[0]);
             }
 
             dataGridViewMain.AllowUserToAddRows = false;
@@ -173,11 +199,11 @@ namespace DataBase
         /// <param name="files">the files to extract</param>
         private void ParseFiles(string[] files)
         {
-            StringBuilder sb = Tools.ParseFiles((files));
+            bool isParsed = Tools.ParseFiles((files));
 
-            if (sb.Length != 0)
+            if (isParsed)
             {
-                AppendDataToDGV(sb, files);
+                AppendDataToDGV(files);
             }
         }
 
